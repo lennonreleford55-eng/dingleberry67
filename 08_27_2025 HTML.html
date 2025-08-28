@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src='../assets/console.js'></script>
+<title>Website</title>
+</head>
+<body>
+<h1 class="header-title" id="intro">Welcome to the code editor!</h1>
+<script>
+var currentColor = "b";
+
+var color1 = "green";
+var color2 = "black";
+
+setInterval(function(){
+ var text = document.getElementById('intro');
+ 
+ if (currentColor == "b") {
+  text.style.color = color1;
+  currentColor = "g";
+ } else if (currentColor == "g") {
+  text.style.color = color2;
+  currentColor = "b";
+ }
+}, 1000);
+
+console.log("Welcome to the console!");
+</script>
+</body>
+<head>
+<style>
+body {
+ text-align: center;
+}
+
+.header-title {
+ letter-spacing: 3px;
+ animation: wobbly 2s linear infinite;
+}
+
+@keyframes wobbly {
+ 0%{
+  letter-spacing: 3px;
+ }
+ 50%{
+  letter-spacing: 5px;
+ }
+ 100%{
+  letter-spacing: 3px;
+ }
+}
+</style>
+</head>
+</html>
